@@ -36,8 +36,7 @@ app.post("/sendemail" , async (req , res) => {
                 name: "Smeet Chavan",
                 address: "smeet.br.chavan7@gmail.com"
             },
-            // to: "ravi@anchors.in",
-            to: "smeetchavan567@gmail.com",
+            to: "ravi@anchors.in",
             subject: "Requesting a call back",
             html: `<div><h3>Name : ${name}</h3></div><div><h3>Phone : ${phone}</h3></div>`
         })
