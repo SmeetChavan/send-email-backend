@@ -22,6 +22,10 @@ app.use(urlencoded({extended: true}));
 
 app.use(cors());
 
+app.get('/' , (req , res) => {
+    res.send("Backend is Working");
+});
+
 app.post("/sendemail" , async (req , res) => {
 
     const {name , phone} = req.body;
