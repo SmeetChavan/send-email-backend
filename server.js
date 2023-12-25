@@ -20,11 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(urlencoded({extended: true}));
 
-app.use(cors({
-    credentials: true,
-    origin: "https://youtube-api-frontend.vercel.app/",
-    methods: ["GET", "POST"],
-}));
+app.use(cors());
 
 app.get('/' , (req , res) => {
     res.send("Backend is Working");
