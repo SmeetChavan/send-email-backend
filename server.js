@@ -23,7 +23,7 @@ app.use(urlencoded({extended: true}));
 app.use(cors());
 
 app.get('/' , (req , res) => {
-    res.send("Backend is Working");
+    res.send("Backend is Working Fine");
 });
 
 app.post("/sendemail" , async (req , res) => {
