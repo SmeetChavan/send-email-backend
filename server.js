@@ -34,10 +34,10 @@ app.post("/sendemail" , async (req , res) => {
         const info = await transporter.sendMail({
             from: {
                 name: name,
-                address: address
+                address: 'smeet.br.chavan7@gmail.com'
             },
-            to: "smeet.br.chavan7@gmail.com",
-            subject: "Requesting a call back",
+            to: "smeetchavan567@gmail.com",
+            subject: "Requesting a call back (youtube earning project of smeet)",
             html: `<div><h3>Name : ${name}</h3></div><div><h3>Phone : ${phone}</h3></div><div><h3>Email : ${address}</h3></div>`
         })
 
