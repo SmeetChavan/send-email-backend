@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
         user: "smeet.br.chavan7@gmail.com",
         pass: process.env.EMAIL_PASSWORD,
     },
-})
+});
 
 const app = express();
 app.use(cors());
