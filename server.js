@@ -27,18 +27,18 @@ app.get('/' , (req , res) => {
 
 app.post("/sendemail" , async (req , res) => {
 
-    const {name , phone} = req.body;
+    const {name , phone , address} = req.body;
 
     try {
 
         const info = await transporter.sendMail({
             from: {
-                name: "Smeet Chavan",
-                address: "smeet.br.chavan7@gmail.com"
+                name: name,
+                address: address
             },
-            to: "ravi@anchors.in",
+            to: "smeet.br.chavan7@gmail.com",
             subject: "Requesting a call back",
-            html: `<div><h3>Name : ${name}</h3></div><div><h3>Phone : ${phone}</h3></div>`
+            html: `<div><h3>Name : ${name}</h3></div><div><h3>Phone : ${phone}</h3></div><div><h3>Email : ${address}</h3></div>`
         })
 
         res.status(200).json(info);
